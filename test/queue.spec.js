@@ -73,5 +73,24 @@ describe('Queue', () => {
     });
   });
 
+  describe('#getSize', () => {
+    const qu = new Queue();
+
+    qu.enqueue('node1');
+    qu.enqueue('node2');
+    qu.enqueue('node3');
+
+    it('assigns 3 to this.size', () => {
+      expect(qu.getSize()).to.equal(3);
+    });
+
+    it('assigns 0 to this.size', () => {
+      qu.dequeue();
+      qu.dequeue();
+      qu.dequeue();
+      expect(st.getSize()).to.equal(0);
+    });
+  });
+
 
 });
