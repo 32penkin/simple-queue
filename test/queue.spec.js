@@ -9,9 +9,27 @@ describe('Queue', () => {
       expect(qu.size).to.equal(0);
     });
 
-    it('assigns null to this.head', () => {
+    it('assigns null to this.first', () => {
       expect(qu.first).to.equal(null);
     });
   });
+
+  describe('#enqueue', () => {
+    const qu = new Queue();
+
+    qu.enqueue('node1');
+    qu.enqueue('node2');
+    qu.enqueue('node3');
+
+    it('assigns 3 to this.size', () => {
+      expect(qu.size).to.equal(3);
+    });
+
+    it('assigns node1 to this.first', () => {
+      expect(qu.first.data).to.equal('node1');
+    });
+  });
+
+
 
 });
