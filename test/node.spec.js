@@ -7,7 +7,7 @@ describe('Node', () => {
 
     node1.next = node2;
 
-    it('assigns node2 to this.prev', () => {
+    it('assigns node2 to this.next', () => {
       expect(node1.next).to.equal(node2);
     });
 
