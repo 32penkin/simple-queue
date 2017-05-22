@@ -34,11 +34,11 @@ class Queue {
   }
 
   getFirst() {
-
+    return this.first;
   }
 
   getSize() {
-
+    return this.size;
   }
 
 }

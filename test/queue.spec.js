@@ -88,7 +88,7 @@ describe('Queue', () => {
       qu.dequeue();
       qu.dequeue();
       qu.dequeue();
-      expect(st.getSize()).to.equal(0);
+      expect(qu.getSize()).to.equal(0);
     });
   });
 
