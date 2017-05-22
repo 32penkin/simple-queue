@@ -57,7 +57,7 @@ describe('Queue', () => {
       expect(qu.dequeue()).to.be.an.instanceof(Node);
     });
 
-    it('assigns fully popped stack', () => {
+    it('assigns fully dequeued queue', () => {
       qu.dequeue();
       qu.dequeue();
       qu.dequeue();
@@ -66,7 +66,7 @@ describe('Queue', () => {
       expect(qu.first).to.equal(null);
     });
 
-    it('check an empty stack', () => {
+    it('check an empty queue', () => {
       qu2.dequeue();
       expect(qu2.size).to.equal(0);
       expect(qu2.first).to.equal(null);

@@ -22,7 +22,15 @@ class Queue {
   }
 
   dequeue() {
+    let temp = this.first;
 
+    if(this.size == 0) {
+      return null;
+    } else {
+      this.first = this.first.next;
+      this.size--;
+      return temp;
+    }
   }
 
   getFirst() {

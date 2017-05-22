@@ -8,6 +8,11 @@ qu1.enqueue('node2');
 qu1.enqueue('node3');
 qu1.enqueue('node4');
 
+qu1.dequeue();
+qu1.dequeue();
+qu1.dequeue();
+qu1.dequeue();
+
 console.log(qu1);
-console.log('----------------------');
-console.log(qu1.first);
+
+
