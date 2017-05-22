@@ -28,6 +28,12 @@ describe('Queue', () => {
     it('assigns node1 to this.first', () => {
       expect(qu.first.data).to.equal('node1');
     });
+
+    it('verify the correctness of data)', () => {
+      expect(() => {
+        qu.enqueue(undefined);
+      }).to.throw();
+    });
   });
 
 
