@@ -6,15 +6,26 @@ class Queue {
     this.size = 0;
   }
 
-  enqueue (data) {
+  enqueue(data) {
+    if (data == undefined) throw 'Data is undefined!';
+    let node = new Node(data);
+    let currentNode = this.first;
+
+    if(this.size == 0) {
+      this.first = node;
+      this.size++
+    } else {
+      while (currentNode.next) currentNode = currentNode.next;
+      currentNode.next = node;
+      this.size++;
+    }
+  }
+
+  dequeue() {
 
   }
 
-  dequeue () {
-
-  }
-
-  getFrist() {
+  getFirst() {
 
   }
 
