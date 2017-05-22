@@ -8,7 +8,7 @@ class Queue {
 
   enqueue(data) {
     if (data == undefined) throw 'Data is undefined!';
-    let node = new Node(data);
+    const node = new Node(data);
     let currentNode = this.first;
 
     if(this.size == 0) {
@@ -22,7 +22,7 @@ class Queue {
   }
 
   dequeue() {
-    let temp = this.first;
+    const temp = this.first;
 
     if(this.size == 0) {
       return null;

@@ -28,7 +28,7 @@
   first: Node { data: 'node1', next: Node { data: 'node2', next: null } },
   size: 2 }
   ```
-  To "dequeue" this Stack:
+  To "dequeue" this Queue:
   ```sh
   queue.dequeue();
   ```
