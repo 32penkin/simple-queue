@@ -41,3 +41,8 @@
   Node { data: 'node1', next: Node { data: 'node2', next: null } }
   ```
  ---
+ 
+ 
+ 
+ 
+ \r\n\r\nIt's easy and very common to create new types. Main point for all customization is `RkTheme` object.\r\nNew rkTypes are defined using `setType` method of `RkTheme`:\r\n`RkChoice` is a component which style depends or it's internal state. There are 4 states for this component:\r\n- unselected (base)\r\n- selected\r\n- unselected & disabled\r\n- selected & disabled\r\nEach of this state can be configured using `rkTypes`. That means you can define set of correctly named `RkType`s\r\nand `RkChoice` will apply them according to its state.\r\nUse the following convention:\r\n- `~name` : Unselected state.\r\n- `~nameSelected` : Selected state.\r\n- `~nameDisabled` : Unselected & disabled state.\r\n- `~nameSelectedDisabled`: Selected & disabled state.\r\nWhere `~name` is name of yours `rkType`.\r\nOne more note: during state change `RkChoice` not replace base `rkType` with new one. It just add correct.\r\nSo for example `disabled` component will have actually two `rkTypes` - base and disabled.\r\nTo define new `rkType` you can use predefined properties which will passed to according element inside component:\r\n\r\n
